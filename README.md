@@ -14,4 +14,8 @@ The following provides a description of the different files:
     e) The compute.predpoints() function identifies the prediction points in each area in the shapefile. The output from this function will be used to compute spatial averages, i.e., too aggregate values from point-level to area-level. This function and the previous one are also adapted from https://github.com/michelacameletti/INLA_COSP. 
 
   
-2. 
+2. Fitting.Stage1.Stage2.R 
+
+  This file contains two important functions: a) The function "stage1.fit.ST.final.Melding()" performs the data fusion using the Bayesian melding model. The default approach is to perform a two-stage process while accounting for the uncertainty in the first stage model estimation. The actual simulation from the posterior predictive distributions of the stage one model is performed in another function. This function returns the model estimates both for the case of having informative and non-informative priors and also some plots. b) The function "stage2.fit.ST()" fits the generalized linear mixed model to link the Poisson counts and the estimated exposures at the area level. This functions simulates several times from the psoterior predictive distribution of the stage one model, and then fits the GLMM each time. This function returns the model estimates both for the case of having informative and non-informative priors and also some plots.
+  
+  3. 
