@@ -20,6 +20,15 @@ The following provides a description of the different files:
   
   3. OtherHelperFunctions.R
   
-  This file contains helper functions, mostly functions used to produce plots and functions which computes the bias, RMSE, and coverage probabiltiies to assess the performance of the proposed method under different scenarios.
+  This file contains helper functions - mostly functions which produce useful plots and functions which computes the bias, RMSE, and coverage probabilities to assess the performance of the proposed method under different scenarios.
+ 
+  4. FullSimulation.OneReplicate.R
+
+  This file contains a single function called "Simulation.Run.Melding()". This function performs one full simulation, .i.e., from simulating a spatio-temporal data, to model fitting, saving important results, and saving some useful plots if one wishes. The user needs to specify the scenario of interest. Also, this function can perform several simulations (several independent replications) via the argument "n_simulations". This is not defined as an argument of the function; this is instead defined in another function. 
+  
+  5. Several.simulations_MainFile.R
+
+  This functions loads the packages, sets the working directory and the filepath of the folder for the figures and results. This R file also sets the true values of the parameters for the simulation study. Other important aspects in the simulation set-up and model fitting are also in this file; this includes the number of samples that we want from the marginal posteriors, the number of times we sample from the posterior predictive distribution of the stage one model, the number of independent replicates for each scenario setting, and the subgroup identifier since the scenarios are performed in different batches. This function runs the function "Simulation.Run.Melding()".
+  
   
   
