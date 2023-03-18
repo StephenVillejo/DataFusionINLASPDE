@@ -5,6 +5,7 @@ These are the R codes to implement the method discussed in the paper "Data Fusio
 The following provides a description of the different files:
 
 1. DataSimulation.R
+2
   This files contains five important functions:
     i. "Data_simulation()" simulates a data from the proposed spatio-temporal model. It gives you the Poisson counts at the area level, the observed values in a network of monitoring stations, a high-resolution data (can be an output of a numerical model or satellite data), and the covariate data.
     ii. The "rspde()" function simulates a Matern field. This function is borrowed from [tutorials/spde/spde-tutorial-functions.R](https://github.com/grantbrown/inla/blob/master/tutorials/spde/spde-tutorial-functions.R).
